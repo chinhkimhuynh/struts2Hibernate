@@ -272,11 +272,11 @@ $(document).ready(function(){
 		var email = $(tr).find('input[name="email"]').val();
 		var address = $(tr).find('input[name="address"]').val();
 		var phone = $(tr).find('input[name="phone"]').val();
-		$('input[name="user.id"]').val(id);
-		$('input[name="user.name"]').val(name);
-		$('textarea[name="user.address"]').val(address);
-		$('input[name="user.email"]').val(email);
-		$('input[name="user.phone"]').val(phone);
+		$('input[name="employee.id"]').val(id);
+		$('input[name="employee.name"]').val(name);
+		$('textarea[name="employee.address"]').val(address);
+		$('input[name="employee.email"]').val(email);
+		$('input[name="employee.phone"]').val(phone);
 	});
 
 	
@@ -314,7 +314,7 @@ $(document).ready(function(){
                     </tr>
                 </thead>
                 <tbody>
-                	<s:iterator value = "userActionForm.users">
+                	<s:iterator value = "employeeActionForm.employees">
                 		<tr>
                 			<s:hidden name = "id"/>
                 			<s:hidden name = "name"/>
@@ -349,19 +349,19 @@ $(document).ready(function(){
 					<div class="modal-body">					
 						<div class="form-group">
 							<label>Name</label>
-							<input name="user.name" class="form-control" >
+							<input name="employee.name" class="form-control" >
 						</div>
 						<div class="form-group">
 							<label>Email</label>
-							<input name="user.email" class="form-control" />
+							<input name="employee.email" class="form-control" />
 						</div>
 						<div class="form-group">
 							<label>Address</label>
-							<textarea name="user.address" class="form-control"></textarea>
+							<textarea name="employee.address" class="form-control"></textarea>
 						</div>
 						<div class="form-group">
 							<label>Phone</label>
-							<input name="user.phone" class="form-control" />
+							<input name="employee.phone" class="form-control" />
 						</div>					
 					</div>
 					<div class="modal-footer">
@@ -382,22 +382,22 @@ $(document).ready(function(){
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<div class="modal-body">
-						<input type="hidden" name="user.id" id="id">					
+						<input type="hidden" name="employee.id" id="id">					
 						<div class="form-group">
 							<label>Name</label>
-							<input name="user.name" id="name" type="text" class="form-control" required>
+							<input name="employee.name" id="name" type="text" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Email</label>
-							<input name="user.email" id="email" type="email" class="form-control" required>
+							<input name="employee.email" id="email" type="email" class="form-control" required>
 						</div>
 						<div class="form-group">
 							<label>Address</label>
-							<textarea name="user.address" id="address" class="form-control" required></textarea>
+							<textarea name="employee.address" id="address" class="form-control" required></textarea>
 						</div>
 						<div class="form-group">
 							<label>Phone</label>
-							<input name="user.phone" id="phone" type="text" class="form-control" required>
+							<input name="employee.phone" id="phone" type="text" class="form-control" required>
 						</div>					
 					</div>
 					<div class="modal-footer">
@@ -422,7 +422,7 @@ $(document).ready(function(){
 						<p class="text-warning"><small>This action cannot be undone.</small></p>
 					</div>
 					<div class="modal-footer">
-						<input type="hidden" name="user.id" id="deleteId">
+						<input type="hidden" name="employee.id" id="deleteId">
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
 						<input type="submit" class="btn btn-danger" value="Delete">
 					</div>

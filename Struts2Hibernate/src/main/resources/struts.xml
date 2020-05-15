@@ -4,25 +4,31 @@
 	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
-<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.devMode" value="true"></constant>
 
-<constant name="struts.convention.result.path" value="/"></constant>
+	<constant name="struts.convention.result.path" value="/"></constant>
 
-<package name="user" namespace="/User" extends="struts-default">
-	<action name="list" class="com.journaldev.struts2hibernate.action.UserAction" method="execute">
-		<result name="success">/form.jsp</result>
-	</action>
-	<action name="saveOrupdate" class="com.journaldev.struts2hibernate.action.UserAction" method="saveOrupdate">
-		<result name = "success" type = "redirect">
-            list
-         </result>
-	</action>
-	<action name="delete" class="com.journaldev.struts2hibernate.action.UserAction" method="delete">
-		<result name = "success" type = "redirect">
-            list
-         </result>
-	</action>
-	
-</package>
+	<package name="employee" namespace="/" extends="struts-default">
+		<action name=""
+			class="jp.co.mps.struts2hibernate.action.EmployeeAction"
+			method="execute">
+			<result name="success">/form.jsp</result>
+		</action>
+		<action name="saveOrupdate"
+			class="jp.co.mps.struts2hibernate.action.EmployeeAction"
+			method="saveOrupdate">
+			<result name="success" type="redirect">
+				/
+			</result>
+		</action>
+		<action name="delete"
+			class="jp.co.mps.struts2hibernate.action.EmployeeAction"
+			method="delete">
+			<result name="success" type="redirect">
+				/
+			</result>
+		</action>
+
+	</package>
 
 </struts>
